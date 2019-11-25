@@ -6,6 +6,21 @@ public class main {
 
 
    public static void main(String[] args){
+
+       System.out.println(".___________. __    __  .______       __  ___  ___________    ____ \n" +
+               "|           ||  |  |  | |   _  \\     |  |/  / |   ____\\   \\  /   / \n" +
+               "`---|  |----`|  |  |  | |  |_)  |    |  '  /  |  |__   \\   \\/   /  \n" +
+               "    |  |     |  |  |  | |      /     |    <   |   __|   \\_    _/   \n" +
+               "    |  |     |  `--'  | |  |\\  \\----.|  .  \\  |  |____    |  |     \n" +
+               "    |__|      \\______/  | _| `._____||__|\\__\\ |_______|   |__|     \n" +
+               "                                                                   \n" +
+               "                _______       ___   ____    ____                   \n" +
+               "               |       \\     /   \\  \\   \\  /   /                   \n" +
+               "               |  .--.  |   /  ^  \\  \\   \\/   /                    \n" +
+               "               |  |  |  |  /  /_\\  \\  \\_    _/                     \n" +
+               "               |  '--'  | /  _____  \\   |  |                       \n" +
+               "               |_______/ /__/     \\__\\  |__|                       \n" +
+               "                                                 ");
        Scanner sc = new Scanner(System.in);
 //       Random diceroll = new Random();
 //       System.out.println(diceroll.nextInt(12) + 1);
@@ -27,18 +42,78 @@ public class main {
        while (!charconfirm) {
            if (charnchoice == 1) {
                System.out.printf("David, a stout young warrior, gets bonuses to health and a stronger defense stat. You'll have 100 health, +10 to your attack, and +10 to your defense!%n");
+               System.out.println("\n" +
+                       "\n" +
+                       "                  (\\    /)\n" +
+                       "                  |_)//(_|\n" +
+                       "                  |4\\_/4)(\n" +
+                       "                 '( (_  -)D\n" +
+                       "                   ) _)  /\\,__\n" +
+                       "                 _,\\_._,/ /   `)\n" +
+                       "    \\.,_,,      ( _   ~ .   ,   \\\n" +
+                       "     \\   (\\      \\(   \\/  _)(    )\n" +
+                       "      \\   \\\\      )). _______>-. `*\n" +
+                       "       \\  /\\\\    _'( /   /\\  '\\  _)\n" +
+                       "        \\( ,\\\\.-'  '/    \\/    \\/\n" +
+                       "         '  \\><)_'.)|/\\/\\/\\/\\/\\|\n" +
+                       "              \\) ,( |\\/\\/\\/\\/\\/|\n" +
+                       "              ' ((  \\    /\\    /\n" +
+                       "               ((((  \\___\\/___/)\n" +
+                       "                ((,) /   ((()   )\n" +
+                       "                 \"..-,  (()(\"   /\n" +
+                       "                  _//.   ((() .\"\n" +
+                       "          _____ //,/\" ___ ((( ', ___\n" +
+                       "                           ((  )\n" +
+                       "                            / /\n" +
+                       "                          _/,/'\n" +
+                       "                        /,/,\"\n" +
+                       " ");
                 selectedchamp = "David";
                 heroHealth = 100;
                 heroAttack = 10;
                 heroDefense = 10;
            } else if (charnchoice == 2) {
                System.out.printf("Fer, an intellectual and wise mage who casts spells in the Java language, gets bonuses to using his attack modifier to boost use of items. You'll have 80 health and all items get +10 to their use!%n");
+               System.out.println("                       .\n" +
+                       "\n" +
+                       "                        .\n" +
+                       "              /^\\     .\n" +
+                       "         /\\   \"V\"\n" +
+                       "        /__\\   I      O  o\n" +
+                       "       //..\\\\  I     .\n" +
+                       "       \\].`[/  I\n" +
+                       "       /l\\/j\\  (]    .  O\n" +
+                       "      /. ~~ ,\\/I          .\n" +
+                       "      \\\\L__j^\\/I       o\n" +
+                       "       \\/--v}  I     o   .\n" +
+                       "       |    |  I   _________\n" +
+                       "       |    |  I c(`       ')o\n" +
+                       "       |    l  I   \\.     ,/\n" +
+                       "     _/j  L l\\_!  _//^---^\\\\_   \n" +
+                       "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                selectedchamp = "Fer";
                heroHealth = 80;
                heroAttack = 10;
                heroDefense = 5;
            } else if (charnchoice == 3) {
                System.out.printf("Sophie, a cunning rogue, gets bonuses to her attack. You'll start with 75 health and all attack commands gain +15 during combat!%n");
+               System.out.println("      ___                                                             \n" +
+                       "     /___\\_/                                                          \n" +
+                       "     |\\_/|<\\                                                          \n" +
+                       "     (`o`) `   __(\\_            |\\_                                   \n" +
+                       "     \\ ~ /_.-`` _|__)  ( ( ( ( /()/                                   \n" +
+                       "    _/`-`  _.-``               `\\|                                    \n" +
+                       " .-`      (    .-.                                                    \n" +
+                       "(   .-     \\  /   `-._                                                \n" +
+                       " \\  (\\_    /\\/        `-.__-()                                        \n" +
+                       "  `-|__)__/ /  /``-.   /_____8                                        \n" +
+                       "        \\__/  /     `-`                                               \n" +
+                       "       />|   /                                                        \n" +
+                       "      /| J   L                                                        \n" +
+                       "      `` |   |                                                        \n" +
+                       "         L___J                                                        \n" +
+                       "          ( |                                                         \n" +
+                       "         .oO()                       ");
                selectedchamp = "Sophie";
                heroHealth = 75;
                heroAttack = 15;
@@ -68,23 +143,76 @@ public class main {
        System.out.printf("%s gathers their items quickly - time is wasting and Thanksgiving needs to get underway! Jumping in their trusty vehicle, a Tesla Cybertruck, %s speeds down to HEB.%nThe parking lot is empty with scattered boxes of turkeys throughout the lot - what could it mean?%nSteeling their nerves, %s heads inside the door.%n%n", selectedchamp, selectedchamp, selectedchamp);
 
        System.out.printf("%s walks through the door and takes in the scene.%nSeveral lights flicker overhead, out of operation, and the PA system plays a loop of \"Never Gonna Give You Up\" by Rick Astley.%nImmediately, %s hears a growl from the produce section to the right.%nUpon looking over, a purple and red amorphous blob shakes and forms until it is the size of a Volkswagen Beetle - that's unusual.%nThe Cranberry Cretin slimes its way over!%n", selectedchamp, selectedchamp);
+       System.out.println("     __\n" +
+               "    (__)\n" +
+               "  _(_)(_)_\n" +
+               " (__)(____)  \n" +
+               "(__)(_)(___)");
 
        fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
 
        System.out.printf("%s looks in disgust at the large pile of cranberry sauce as it loses shape and oozes back all over the floor of the produce section - sticky.%nThe music suddenly stops, and a voice comes over the line.%n\"So you've come.\" The voice says with a brief pause before continuing on emphasizing every word spoken with immense hate, \"So, you've come to die.\"%n\"Turkey Goblin!\" %s yells, \"Where are all my ingredients?! I don't got TIME for this today!\"%n\"Oh?\" The voice responds from the speakers above.\"That's too bad, because I don't need much more time for my Turkeylings to be complete.\"%n", selectedchamp, selectedchamp);
 
        System.out.printf("%s runs towards the rear, looking down aisles as they pass by - where is this Turkey Goblin?%nA roar erupts from Aisle 12 - Potatoes, Canned Goods, and more. Suspicious.%nIntrigued, %s turns into Aisle 12 and sees a bubbling mass of mashed potatoes stacking into the shape of a short warrior. It's the Malicious Mashed Potato Gnoll!%n", selectedchamp, selectedchamp);
+       System.out.println("             ,      ,\n" +
+               "            /(.-\"\"-.)\\\n" +
+               "        |\\  \\/      \\/  /|\n" +
+               "        | \\ / =.  .= \\ / |\n" +
+               "        \\( \\   o\\/o   / )/\n" +
+               "         \\_, '-/  \\-' ,_/\n" +
+               "           /   \\__/   \\\n" +
+               "           \\ \\__/\\__/ /\n" +
+               "         ___\\ \\|--|/ /___\n" +
+               "       /`    \\      /    `\\\n" +
+               "      /       '----'       \\");
        enemyHealth = 100;
 
        fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
        System.out.printf("The Malicious Mashed Potato Gnoll screams suddenly - %s realizes what is going on and ducks behind a display for apple pies.%nAs %s ducks, the gnoll explodes sending boiling gravy throughout the aisle. That was close!%n", selectedchamp, selectedchamp);
 
        System.out.printf("\"Enough.\" The voice comes on again over the PA system. \"That is enough.\"%n%s looks around and readies for a surprise attack. Instead, the voice offers \"Why don't we do this? Come and find me in the frozen food section and see how you stand up against me.\"%n%s nods and internally prepares for the fight - time to take back this Thanksgiving! %s runs immediately to the frozen food section.%nTurning the corner, a large bird rears up as %s approaches. It smells terrible and leaves a trail of stuffing behind as it shuffles and ambles towards %s.%nHere it is: THE TURKEY GOBLIN.%n", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
+       System.out.println("\n" +
+               "                             ,+*^^*+___+++_\n" +
+               "                       ,*^^^^              )\n" +
+               "                    _+*                     ^**+_\n" +
+               "                  +^       _ _++*+_+++_,         )\n" +
+               "      _+^^*+_    (     ,+*^ ^          \\+_        )\n" +
+               "     {       )  (    ,(    ,_+--+--,      ^)      ^\\\n" +
+               "    { (@)    } f   ,(  ,+-^ __*_*_  ^^\\_   ^\\       )\n" +
+               "   {:;-/    (_+*-+^^^^^+*+*<_ _++_)_    )    )      /\n" +
+               "  ( /  (    (        ,___    ^*+_+* )   <    <      \\\n" +
+               "   U _/     )    *--<  ) ^\\-----++__)   )    )       )\n" +
+               "    (      )  _(^)^^))  )  )\\^^^^^))^*+/    /       /\n" +
+               "  (      /  (_))_^)) )  )  ))^^^^^))^^^)__/     +^^\n" +
+               " (     ,/    (^))^))  )  ) ))^^^^^^^))^^)       _)\n" +
+               "  *+__+*       (_))^)  ) ) ))^^^^^^))^^^^^)____*^\n" +
+               "  \\             \\_)^)_)) ))^^^^^^^^^^))^^^^)\n" +
+               "   (_             ^\\__^^^^^^^^^^^^))^^^^^^^)\n" +
+               "     ^\\___            ^\\__^^^^^^))^^^^^^^^)\\\\           \n" +
+               "          ^^^^^\\uuu/^^\\uuu/^^^^\\^\\^\\^\\^\\^\\^\\^\\          \n" +
+               "             ___) >____) >___   ^\\_\\_\\_\\_\\_\\_\\)         \n" +
+               "            ^^^//\\\\_^^//\\\\_^       ^(\\_\\_\\_\\)");
        enemyHealth = 200;
 
        fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
 
        System.out.printf("With %s's final attack, the Turkey Goblin slumps back onto its decaying feathered butt. \"Impossible. There's no mortal that could thwart my efforts. . who are you?\"%n\"Me? I'm %s, and I just saved Thanksgiving\" %s says, running forward and kicking the Turkey Goblin directly in his chest. The Turkey Goblin screams and falls backwards into an open freezer, immediately becoming a turkey popsicle.%n%s notices on the floor a large bundle - the ingredients!%nGrabbing the satchel, %s heads out of HEB as \"All Star\" by Smash Mouth comes over the PA.%nThe day is saved.", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
+
+       System.out.println(".___________. __    __  .______       __  ___  ___________    ____ \n" +
+               "|           ||  |  |  | |   _  \\     |  |/  / |   ____\\   \\  /   / \n" +
+               "`---|  |----`|  |  |  | |  |_)  |    |  '  /  |  |__   \\   \\/   /  \n" +
+               "    |  |     |  |  |  | |      /     |    <   |   __|   \\_    _/   \n" +
+               "    |  |     |  `--'  | |  |\\  \\----.|  .  \\  |  |____    |  |     \n" +
+               "    |__|      \\______/  | _| `._____||__|\\__\\ |_______|   |__|     \n" +
+               "                                                                   \n" +
+               "                _______       ___   ____    ____                   \n" +
+               "               |       \\     /   \\  \\   \\  /   /                   \n" +
+               "               |  .--.  |   /  ^  \\  \\   \\/   /                    \n" +
+               "               |  |  |  |  /  /_\\  \\  \\_    _/                     \n" +
+               "               |  '--'  | /  _____  \\   |  |                       \n" +
+               "               |_______/ /__/     \\__\\  |__|                       \n" +
+               "                                                 \n" +
+               "                       THANKS FOR PLAYING!!");
 
 
 
