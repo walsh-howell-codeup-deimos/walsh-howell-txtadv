@@ -18,27 +18,28 @@ public class main {
        int heroDefense = 0;
        int enemyHealth = 50;
 
-       System.out.println("Filler text for story leading up to character selection. Description of heroes: 1, 2, or 3");
+       System.out.printf("Upon awaking on Thanksgiving Morning, content and happy, our hero descends to their kitchen ready to begin cooking for the greatest of holidays - Thanksgiving.%nThe fridge looms on the other side of the room with a curious condition - the fridge door is open!%nRunning to the door, you open it to find a written note.%n\"To whom it may concern:%nGreetings from the Turkey Goblin! I have taken your foul ingredients and those of your neighbors to bolster my evil Turkey Army.%nIf you wish to test your mettle, meet me at my new headquarters, HEB, if you dare!%nYour truly,%nthe Turkey Goblin\"%n");
+       System.out.printf("Choose your hero for this task: You are%n1. David, the Warrior.%n2. Fer, the Mage.%n3. Sophie, the Rogue.%n");
         int charnchoice = sc.nextInt();
        boolean charconfirm = false;
         sc.nextLine();
        String selectedchamp = "";
        while (!charconfirm) {
            if (charnchoice == 1) {
-               System.out.println("This is working one");
-                selectedchamp = "David, the warrior";
+               System.out.printf("David, a stout young warrior, gets bonuses to health and a stronger defense stat. You'll have 100 health, +10 to your attack, and +10 to your defense!%n");
+                selectedchamp = "David";
                 heroHealth = 100;
                 heroAttack = 10;
                 heroDefense = 10;
            } else if (charnchoice == 2) {
-               System.out.println("This is working two");
-               selectedchamp = "Fer, the mage";
+               System.out.printf("Fer, an intellectual and wise mage who casts spells in the Java language, gets bonuses to using his attack modifier to boost use of items. You'll have 80 health and all items get +10 to their use!%n");
+               selectedchamp = "Fer";
                heroHealth = 80;
                heroAttack = 10;
                heroDefense = 5;
            } else if (charnchoice == 3) {
-               System.out.println("This is working three");
-               selectedchamp = "Sophie, the rogue";
+               System.out.printf("Sophie, a cunning rogue, gets bonuses to her attack. You'll start with 75 health and all attack commands gain +15 during combat!%n");
+               selectedchamp = "Sophie";
                heroHealth = 75;
                heroAttack = 15;
                heroDefense = 5;
@@ -59,21 +60,39 @@ public class main {
            } else {
                System.out.println("Which warrior would you like to choose, then?");
                charnchoice = sc.nextInt();
-               System.out.println(selectedchamp);
                sc.nextLine();
            }
        };
 
 //       first encounter/introduction - goes into them entering store, some kind of narrative encounters first mob
+       System.out.printf("%s gathers their items quickly - time is wasting and Thanksgiving needs to get underway! Jumping in their trusty vehicle, a Tesla Cybertruck, %s speeds down to HEB.%nThe parking lot is empty with scattered boxes of turkeys throughout the lot - what could it mean?%nSteeling their nerves, %s heads inside the door.%n%n", selectedchamp, selectedchamp, selectedchamp);
 
-       System.out.printf("%s first encounter text: starts first fight text%n", selectedchamp);
+       System.out.printf("%s walks through the door and takes in the scene.%nSeveral lights flicker overhead, out of operation, and the PA system plays a loop of \"Never Gonna Give You Up\" by Rick Astley.%nImmediately, %s hears a growl from the produce section to the right.%nUpon looking over, a purple and red amorphous blob shakes and forms until it is the size of a Volkswagen Beetle - that's unusual.%nThe Cranberry Cretin slimes its way over!%n", selectedchamp, selectedchamp);
+
+       fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
+
+       System.out.printf("%s looks in disgust at the large pile of cranberry sauce as it loses shape and oozes back all over the floor of the produce section - sticky.%nThe music suddenly stops, and a voice comes over the line.%n\"So you've come.\" The voice says with a brief pause before continuing on emphasizing every word spoken with immense hate, \"So, you've come to die.\"%n\"Turkey Goblin!\" %s yells, \"Where are all my ingredients?! I don't got TIME for this today!\"%n\"Oh?\" The voice responds from the speakers above.\"That's too bad, because I don't need much more time for my Turkeylings to be complete.\"%n", selectedchamp, selectedchamp);
+
+       System.out.printf("%s runs towards the rear, looking down aisles as they pass by - where is this Turkey Goblin?%nA roar erupts from Aisle 12 - Potatoes, Canned Goods, and more. Suspicious.%nIntrigued, %s turns into Aisle 12 and sees a bubbling mass of mashed potatoes stacking into the shape of a short warrior. It's the Malicious Mashed Potato Gnoll!%n", selectedchamp, selectedchamp);
+       enemyHealth = 100;
+
+       fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
+       System.out.printf("The Malicious Mashed Potato Gnoll screams suddenly - %s realizes what is going on and ducks behind a display for apple pies.%nAs %s ducks, the gnoll explodes sending boiling gravy throughout the aisle. That was close!%n", selectedchamp, selectedchamp);
+
+       System.out.printf("\"Enough.\" The voice comes on again over the PA system. \"That is enough.\"%n%s looks around and readies for a surprise attack. Instead, the voice offers \"Why don't we do this? Come and find me in the frozen food section and see how you stand up against me.\"%n%s nods and internally prepares for the fight - time to take back this Thanksgiving! %s runs immediately to the frozen food section.%nTurning the corner, a large bird rears up as %s approaches. It smells terrible and leaves a trail of stuffing behind as it shuffles and ambles towards %s.%nHere it is: THE TURKEY GOBLIN.%n", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
+       enemyHealth = 200;
+
+       fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
+
+       System.out.printf("With %s's final attack, the Turkey Goblin slumps back onto its decaying feathered butt. \"Impossible. There's no mortal that could thwart my efforts. . who are you?\"%n\"Me? I'm %s, and I just saved Thanksgiving\" %s says, running forward and kicking the Turkey Goblin directly in his chest. The Turkey Goblin screams and falls backwards into an open freezer, immediately becoming a turkey popsicle.%n%s notices on the floor a large bundle - the ingredients!%nGrabbing the satchel, %s heads out of HEB as \"All Star\" by Smash Mouth comes over the PA.%nThe day is saved.", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
 
 
-    fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
 
 
 
-    }
+
+
+   }
 // hardcoded? Attack Item, Health item, Defense item??
 
     public static void fightInterface(int heroHealth, int enemyHealth, int heroAttack, int heroDefense, String selectedchamp) {
@@ -83,7 +102,7 @@ public class main {
         while (heroHealth > 0 && enemyHealth > 0){
             System.out.printf("%s encounters an enemy - what do you do?%n1. Attack.%n2. Defend.%n3. Item.%n4. Run%n", selectedchamp);
             int move = sc.nextInt();
-            int heroattackvalue = diceroll.nextInt(12)+1;
+            int heroattackvalue = diceroll.nextInt(12)+100;
             int herodefendvalue = diceroll.nextInt(heroDefense)+1;
             int enemyattackvalue = diceroll.nextInt(12) + 1;
             if (move == 1){
