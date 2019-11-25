@@ -18,7 +18,6 @@ public class main {
        int heroDefense = 0;
        int enemyHealth = 50;
 
-
        System.out.println("Filler text for story leading up to character selection. Description of heroes: 1, 2, or 3");
         int charnchoice = sc.nextInt();
        boolean charconfirm = false;
@@ -75,7 +74,7 @@ public class main {
 
 
     }
-
+// hardcoded? Attack Item, Health item, Defense item??
 
     public static void fightInterface(int heroHealth, int enemyHealth, int heroAttack, int heroDefense, String selectedchamp) {
         Scanner sc = new Scanner(System.in);
@@ -99,7 +98,21 @@ public class main {
                     System.out.printf("%s defends! The enemy strikes for %d, but %s stands firm and blocks %d damage.%n%s looks down at their wounds and notices %d HP left.%n", selectedchamp, enemyattackvalue, selectedchamp, herodefendvalue, selectedchamp, heroHealth);
                 }
             } else if (move == 3){
-                System.out.println("itemlogic/loophere");
+                System.out.printf("Your usable items are:%n1. Your shopping cart (20 atk to your enemy).%n2. A free sample you found nearby (+15 Health).%n3. Hand sanitizer station nearby. (+2 defense for rest of fight)%n");
+                int item = sc.nextInt();
+                if (item == 1) {
+                    System.out.printf("%s lunges forward with the shopping cart and runs over the enemy's foot!%nIt connects for 20 damage.%n", selectedchamp);
+                    enemyHealth -= 20;
+                    System.out.printf("The enemy now has %d HP left!%n", enemyHealth);
+                } else if (item == 2){
+                    System.out.printf("%s eats a tasty treat - delicious!%nYour health is healed for 15 HP, and you're ready to fight harder!%n", selectedchamp);
+                    heroHealth += 10;
+                    System.out.printf("%s now has %d HP!%n", selectedchamp, heroHealth);
+                } else if (item == 3) {
+                    System.out.printf("This entire store is pretty gross - %s squeezes some hand sanitizer on their hands for a permanent +2 to defense!%n", selectedchamp);
+                    heroDefense += 2;
+                    System.out.printf("%d is your new defense stat for the rest of the fight!%n", heroDefense);
+                };
             } else if (move == 4){
                 System.out.printf("You try to run but there is no escape!%n");
             }
