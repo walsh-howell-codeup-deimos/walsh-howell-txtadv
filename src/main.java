@@ -22,18 +22,13 @@ public class main {
                "               |_______/ /__/     \\__\\  |__|                       \n" +
                "                                                 ");
        Scanner sc = new Scanner(System.in);
-//       Random diceroll = new Random();
-//       System.out.println(diceroll.nextInt(12) + 1);
 
-//       david = warrior, high def = -10
-//       fer = cleric/mageish, high item use +10 to item rolls
-//       sophie = rogue high atk, atk +10
        int heroHealth = 0;
        int heroAttack = 0;
        int heroDefense = 0;
        int enemyHealth = 50;
 
-       System.out.printf("Upon awaking on Thanksgiving Morning, content and happy, our hero descends to their kitchen ready to begin cooking for the greatest of holidays - Thanksgiving.%nThe fridge looms on the other side of the room with a curious condition - the fridge door is open!%nRunning to the door, you open it to find a written note.%n\"To whom it may concern:%nGreetings from the Turkey Goblin! I have taken your foul ingredients and those of your neighbors to bolster my evil Turkey Army.%nIf you wish to test your mettle, meet me at my new headquarters, HEB, if you dare!%nYour truly,%nthe Turkey Goblin\"%n");
+       System.out.printf("Upon awaking on Thanksgiving Morning, content and happy, our hero descends to their kitchen ready to begin cooking for the greatest of holidays - Thanksgiving.%nThe fridge looms on the other side of the room with a curious condition - the fridge door is open!%nRunning to the door, you open it to find a written note.%n\"To whom it may concern:%nGreetings from the Turkey Goblin! I have taken your foul ingredients and those of your neighbors to bolster my evil Turkey Army.%nIf you wish to test your mettle, meet me at my new headquarters, HEB, if you dare!%nYours truly,%nthe Turkey Goblin\"%n");
        System.out.printf("Choose your hero for this task: You are%n1. David, the Warrior.%n2. Fer, the Mage.%n3. Sophie, the Rogue.%n");
         int charnchoice = sc.nextInt();
        boolean charconfirm = false;
@@ -196,7 +191,8 @@ public class main {
 
        fightInterface(heroHealth, enemyHealth, heroAttack, heroDefense, selectedchamp);
 
-       System.out.printf("With %s's final attack, the Turkey Goblin slumps back onto its decaying feathered butt. \"Impossible. There's no mortal that could thwart my efforts. . who are you?\"%n\"Me? I'm %s, and I just saved Thanksgiving\" %s says, running forward and kicking the Turkey Goblin directly in his chest. The Turkey Goblin screams and falls backwards into an open freezer, immediately becoming a turkey popsicle.%n%s notices on the floor a large bundle - the ingredients!%nGrabbing the satchel, %s heads out of HEB as \"All Star\" by Smash Mouth comes over the PA.%nThe day is saved.", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
+       System.out.printf("With %s's final attack, the Turkey Goblin slumps back onto its decaying feathered butt. \"Impossible. There's no mortal that could thwart my efforts. . who are you?\"%n\"Me? I'm %s, and I just saved Thanksgiving\" %s says, running forward and kicking the Turkey Goblin directly in his chest. The Turkey Goblin screams and falls backwards into an open freezer, immediately becoming a turkey popsicle.%n%s notices on the floor a large bundle - the ingredients!%nGrabbing the satchel, %s heads out of HEB as \"All Star\" by Smash Mouth comes over the PA.%nThe day is saved.%n%n1" +
+               "", selectedchamp, selectedchamp, selectedchamp, selectedchamp, selectedchamp);
 
        System.out.println(".___________. __    __  .______       __  ___  ___________    ____ \n" +
                "|           ||  |  |  | |   _  \\     |  |/  / |   ____\\   \\  /   / \n" +
@@ -221,16 +217,14 @@ public class main {
 
 
    }
-// hardcoded? Attack Item, Health item, Defense item??
 
     public static void fightInterface(int heroHealth, int enemyHealth, int heroAttack, int heroDefense, String selectedchamp) {
         Scanner sc = new Scanner(System.in);
         Random diceroll = new Random();
-//        System.out.println(diceroll.nextInt(12) + 1);
         while (heroHealth > 0 && enemyHealth > 0){
             System.out.printf("%s encounters an enemy - what do you do?%n1. Attack.%n2. Defend.%n3. Item.%n4. Run%n", selectedchamp);
             int move = sc.nextInt();
-            int heroattackvalue = diceroll.nextInt(12)+100;
+            int heroattackvalue = diceroll.nextInt(heroAttack)+25;
             int herodefendvalue = diceroll.nextInt(heroDefense)+1;
             int enemyattackvalue = diceroll.nextInt(12) + 1;
             if (move == 1){
